@@ -177,7 +177,8 @@
         .map(w => `<button onclick="searchRelated('${w}')">${w}</button>`)
         .join("");
       return `<div class="related"><strong>Related topics:</strong><br>${related}</div>`;
-  
+    }
+
     async function searchRelated(term) {
       queryInput.value = term;
       form.dispatchEvent(new Event('submit'));
